@@ -18,8 +18,15 @@
                 <h1 class="heading">TODO APP</h1>
             </div>
             <div class="inpBtn">
-                <input type="text" id="inp" placeholder="Add list item">
-                <button onclick="addTodo()" class="add"><i class="fa-solid fa-plus"></i></button>
+                <input type="text" id="inp" placeholder="Add items" autofocus list="suggestion" >
+                <datalist id="suggestion">
+                    <option value="chikenbiryani">
+                    <option value="tikka">
+                    <option value="kabab">
+                    <option value="chikenkarahi">
+                    <option value="muttonkarahi">
+                </datalist>
+                <button id="inpBtn" class="add"><i class="fa-solid fa-plus"></i></button>
             </div>
             <div>
                 <ul id="todoList">

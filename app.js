@@ -1,23 +1,38 @@
-var input = document.getElementById('inp')
-var BTN = document.getElementById('todoList')
-arr = [];
-function addTodo(){
-    if(input.value === ''){
-        alert('please enter an item');
-    } else {
-        // Create a new todo item
-        const todoItem = document.createElement('todoList');
-        todoItem.textContent = input.value;arr.push(inp.value)
-            inp.value = ''
-            
+var btn = document.querySelector('#inpBtn')
+var input = document.querySelector('#inp')
+var todositems = document.querySelector('#todoList')
+
+// console.log(btn)
+btn.addEventListener('click', () => {
+ var inputValue = input.value
+// console.log(inputValue)
+if(inputValue != ''){
+    todositems.innerHTML += `<li>${inputValue}</li>`
+    input.value = ''
+}
+else{
+    alert('Please enter some order')}
 
 
-        // Add the new todo item to the list
-        const todoList = document.getElementById('inp');
-        todoList.appendChild(todoItem);
-
-        // Clear the input field
-        input.value = '';
-    }
+});
+function deleteTodoItem(btn) {
+    var li = btn.parentElement;
+    todositems.removeChild(li);
 }
 
+// var btn = document.querySelector('#inpBtn')
+// var input = document.querySelector('#inp')
+// var todositems = document.querySelector('#todoList')
+// var todos = []
+// // console.log(btn)
+// btn.addEventListener('click', () => {
+//  var inputValue = input.value
+//  // console.log(inputValue)
+//     if(inputValue != ''){
+//         todos.push(inputValue)
+//         todositems.innerHTML += `<li>${inputValue}</li>`
+//         input.value = ''
+//     }
+//     else{
+//         alert('Please enter some value')}
+//     })
