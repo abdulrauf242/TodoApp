@@ -75,3 +75,7 @@
     border-radius: inherit;
     padding: 5px 20px;
 }
+li{
+    list-style-type: none;
+    
+}
